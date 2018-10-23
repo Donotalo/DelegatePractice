@@ -52,7 +52,7 @@ namespace DelegatePractice
             //            DelegateDemo();
 
             //new EventsDemo();
-            new LamdaUser();
+            new LambdaUser();
         }
     }
 }

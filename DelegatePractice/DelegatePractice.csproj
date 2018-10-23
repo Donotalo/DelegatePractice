@@ -46,7 +46,7 @@
   <ItemGroup>
     <Compile Include="EventfulUser.cs" />
     <Compile Include="EventsDemo.cs" />
-    <Compile Include="LamdaUser.cs" />
+    <Compile Include="LambdaUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

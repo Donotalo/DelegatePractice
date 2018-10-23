@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DelegatePractice
 {
-    class LamdaUser
+    class LambdaUser
     {
-        static LamdaUser()
+        static LambdaUser()
         {
             EventfulUser user = new EventfulUser();
             user.NameChangeEvent += (object sender, NameChangeEventArgs e) =>
