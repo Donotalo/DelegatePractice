@@ -18,8 +18,8 @@ namespace DelegatePractice
             EventfulUser1 user = new EventfulUser1();
             user.NameChangeEvent += User_NameChangeEvent;
 
-            user.SetName("Oh");
-            user.SetName("Ah");
+            user.SetName("Neptune");
+            user.SetName("Saturn");
         }
     }
 
@@ -35,8 +35,8 @@ namespace DelegatePractice
             EventfulUser2 user = new EventfulUser2();
             user.NameChangeEvent += User_NameChangeEvent;
 
-            user.SetName("Oh");
-            user.SetName("Ah");
+            user.SetName("Neptune");
+            user.SetName("Saturn");
         }
     }
 }

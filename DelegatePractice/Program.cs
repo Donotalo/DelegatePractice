@@ -28,8 +28,8 @@ namespace DelegatePractice
 
             //new LambdaUser();
 
-            //LinqDemo.LinqDemoV1();
-            //LinqDemo.DemoV2();
+            //LinqDemo.Demo1();
+            //LinqDemo.Demo2();
             //LinqDemo.Demo3();
             //LinqDemo.Demo4();
         }
