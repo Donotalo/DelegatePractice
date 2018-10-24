@@ -11,22 +11,32 @@ namespace DelegatePractice
         public string OldName = "", NewName = "";
     }
 
-    class EventfulUser
+    class EventfulUser1
     {
         private string _name;
 
-        //public delegate void OnNameChange(string old_name, string new_name);
-        //public event OnNameChange NameChangeEvent;
+        public delegate void OnNameChange(string old_name, string new_name);
+        public event OnNameChange NameChangeEvent;
 
         public void SetName(string name)
         {
             string old_name = _name;
             _name = name;
-            //NameChangeEvent?.Invoke(old_name, name);
+            NameChangeEvent?.Invoke(old_name, name);
+        }
+    }
+
+    class EventfulUser2
+    {
+        private string _name;
+
+        public event EventHandler<NameChangeEventArgs> NameChangeEvent;
+
+        public void SetName(string name)
+        {
+            string old_name = _name;
+            _name = name;
             NameChangeEvent?.Invoke(this, new NameChangeEventArgs() { OldName = old_name, NewName = name });
         }
-
-        //public delegate void EventHandler<TEventArgs>(object sender, TEventArgs e);
-        public event EventHandler<NameChangeEventArgs> NameChangeEvent;
     }
 }

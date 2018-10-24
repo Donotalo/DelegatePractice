@@ -10,7 +10,7 @@ namespace DelegatePractice
     {
         static LambdaUser()
         {
-            EventfulUser user = new EventfulUser();
+            EventfulUser2 user = new EventfulUser2();
             user.NameChangeEvent += (object sender, NameChangeEventArgs e) =>
             {
                 Console.WriteLine($"LamdaUser's name changed from {e.OldName} to {e.NewName}");

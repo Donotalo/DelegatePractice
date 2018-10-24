@@ -6,26 +6,37 @@ using System.Threading.Tasks;
 
 namespace DelegatePractice
 {
-    class EventsDemo
+    class EventsDemo1
     {
-        static EventsDemo()
+        static private void User_NameChangeEvent(string old_name, string new_name)
         {
-            EventfulUser user = new EventfulUser();
-            //            user.NameChangeEvent += User_NameChangeEvent;
+            Console.WriteLine($"Name changed from {old_name} to {new_name}");
+        }
+
+        static EventsDemo1()
+        {
+            EventfulUser1 user = new EventfulUser1();
             user.NameChangeEvent += User_NameChangeEvent;
 
             user.SetName("Oh");
             user.SetName("Ah");
         }
+    }
 
-        private static void User_NameChangeEvent(object sender, NameChangeEventArgs e)
+    class EventsDemo2
+    {
+        static private void User_NameChangeEvent(object sender, NameChangeEventArgs e)
         {
             Console.WriteLine($"Name changed from {e.OldName} to {e.NewName}");
         }
 
-        private static void User_NameChangeEvent(string old_name, string new_name)
+        static EventsDemo2()
         {
-            Console.WriteLine($"Name changed from {old_name} to {new_name}");
+            EventfulUser2 user = new EventfulUser2();
+            user.NameChangeEvent += User_NameChangeEvent;
+
+            user.SetName("Oh");
+            user.SetName("Ah");
         }
     }
 }
