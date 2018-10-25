@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DelegatePractice
 {
@@ -6,12 +7,12 @@ namespace DelegatePractice
     {
         static public void DelegateDemo()
         {
-            DelegateDemo dlg = new DelegateDemo(FunctionLibrary.AddThem);
-            dlg.TheAction(35, 37, out int result);
+            DelegateDemo dlg = new DelegateDemo(FunctionLibrary.AddAll);
+            double result = dlg.TheAction(new List<double> { 1, -1, -3, -5 });
             Console.WriteLine(result);
 
-            dlg.TheAction = FunctionLibrary.SubThem;
-            dlg.TheAction(35, 37, out result);
+            dlg.TheAction = FunctionLibrary.Median;
+            result = dlg.TheAction(new List<double> { 7, -1, 5, -5 });
             Console.WriteLine(result);
         }
 
